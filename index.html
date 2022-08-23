@@ -6,12 +6,12 @@
            function success()
            {
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
-              MobileApp.startMobileAppPayment(testVal);
+              MobileApp.startMobileAppPayment(JSON.stringify(testVal));
            }
            function error()
            {
               var testVal = { "status": "fail", "message": "some message" };
-              MobileApp.stopMobileAppPayment(testVal);
+              MobileApp.stopMobileAppPayment(JSON.stringify(testVal));
            }
         </script>
   </head>

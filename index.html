@@ -3,18 +3,25 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript">
-           function init()
+           function success()
            {
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
               MobileApp.startMobileAppPayment(testVal);
+           }
+           function error()
+           {
+              var testVal = { "status": "fail", "message": "some message" };
+              MobileApp.stopMobileAppPayment(testVal);
            }
         </script>
   </head>
   <body>
     <div style="clear: both;height: 3px;"> </div>
     <div>
-      <input value="submit1" type="button" name="submit"
-           id="btnSubmit" onclick="javascript:return init();" />
+      <input value="success" type="button" name="success"
+           id="btnSubmit" onclick="javascript:return success();" />
+      <input value="error" type="button" name="error"
+           id="btnSubmit" onclick="javascript:return error();" />
     </div>
   </body>
 </html>

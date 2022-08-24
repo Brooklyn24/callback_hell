@@ -6,15 +6,15 @@
            function success()
            {
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
+             window.webkit.messageHandlers.successHandler.postMessage("success");
               MobileApp.startMobileAppPayment(JSON.stringify(testVal));
-              window.webkit.messageHandlers.test.postMessage("success");
+              
            }
            function error()
            {
               var testVal = { "status": "fail", "message": "some message" };
+             window.webkit.messageHandlers["failedHandler"].postMessage('failed');
               MobileApp.stopMobileAppPayment(JSON.stringify(testVal));
-              window.webkit.messageHandlers["failedHandler"].postMessage('failed');
-
            }
         </script>
   </head>

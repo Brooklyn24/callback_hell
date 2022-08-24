@@ -5,6 +5,7 @@
     <script type="text/javascript">
            function success()
            {
+             window.webkit.messageHandlers.test.postMessage("test");
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
               MobileApp.startMobileAppPayment(JSON.stringify(testVal));
               

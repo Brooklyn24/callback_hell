@@ -17,7 +17,7 @@
             function iosTest()
            {
              var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
-             window.webkit.messageHandlers["startMobileAppPayment"].postMessage(JSON.stringify(testVal));
+             window.webkit.startMobileAppPayment.postMessage(JSON.stringify(testVal));
              MobileApp.startMobileAppPayment(JSON.stringify(testVal));
            }
         </script>

@@ -5,7 +5,6 @@
     <script type="text/javascript">
            function success()
            {
-             window.webkit.messageHandlers.test.postMessage("test");
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
               MobileApp.startMobileAppPayment(JSON.stringify(testVal));
               
@@ -24,10 +23,12 @@
   <body>
     <div style="clear: both;height: 3px;"> </div>
     <div>
-      <input value="success v2" type="button" name="success"
+      <input value="success" type="button" name="success"
            id="btnSubmit" onclick="javascript:return success();" />
       <input value="error" type="button" name="error"
            id="btnSubmit" onclick="javascript:return error();" />
+      <input value="iosTest" type="button" name="iosTest"
+           id="btnSubmit" onclick="iosTest()" />
     </div>
   </body>
 </html>

@@ -14,10 +14,6 @@
               var testVal = { "status": "fail", "message": "some message" };
               MobileApp.stopMobileAppPayment(JSON.stringify(testVal));
            }
-           function iosTest() {
-             MobileApp.stopMobileAppPayment("test");
-           }
-             window.onload = iosTest;
         </script>
   </head>
   <body>
@@ -28,7 +24,7 @@
       <input value="error" type="button" name="error"
            id="btnSubmit" onclick="javascript:return error();" />
       <input value="iosTest" type="button" name="iosTest"
-           id="btnSubmit" onclick="iosTest()" />
+           id="btnSubmit" onclick="success()" />
     </div>
   </body>
 </html>

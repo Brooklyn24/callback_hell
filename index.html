@@ -7,6 +7,7 @@
            {
               var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
               MobileApp.startMobileAppPayment(JSON.stringify(testVal));
+              window.webkit.messageHandlers.test.postMessage(JSON.stringify(testVal));
            }
            function error()
            {
@@ -18,7 +19,7 @@
   <body>
     <div style="clear: both;height: 3px;"> </div>
     <div>
-      <input value="success v1" type="button" name="success"
+      <input value="success v2" type="button" name="success"
            id="btnSubmit" onclick="javascript:return success();" />
       <input value="error" type="button" name="error"
            id="btnSubmit" onclick="javascript:return error();" />

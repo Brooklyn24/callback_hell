@@ -4,9 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript">
            function success()
-           {
-              var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
-              MobileApp.startMobileAppPayment(JSON.stringify(testVal));
+            {
+             
+             if(typeof MobileApp != "undefined") {
+			          MobileApp.startMobileAppPayment(JSON.stringify(testVal));
+		          }
+		        if(window.webkit.messageHandlers.telcell  != "undefined") {
+		        	window.webkit.messageHandlers.startMobileAppPayment.postMessage(JSON.stringify(testVal)); 
+		        }    
               
            }
            function error()

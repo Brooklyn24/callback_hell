@@ -5,7 +5,7 @@
     <script type="text/javascript">
            function success()
             {
-             
+             var testVal = { "status": "fail", "message": "some message" };
              if(typeof MobileApp != "undefined") {
 			          MobileApp.startMobileAppPayment(JSON.stringify(testVal));
 		          }

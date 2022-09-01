@@ -9,7 +9,7 @@
              if(typeof MobileApp != "undefined") {
 			          MobileApp.startMobileAppPayment(JSON.stringify(testVal));
 		          }
-		        if(window.webkit.messageHandlers.telcell  != "undefined") {
+		        if(window.webkit.messageHandlers.startMobileAppPayment  != "undefined") {
 		        	window.webkit.messageHandlers.startMobileAppPayment.postMessage(JSON.stringify(testVal)); 
 		        }    
               

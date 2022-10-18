@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript">
+	    
            function success()
             {
              var testVal = { "status": "success", "suuid": "123e4567-e89b-12d3-a456-426614174000" };
@@ -25,6 +26,12 @@
              window.webkit.messageHandlers.startMobileAppPayment.postMessage(JSON.stringify(testVal));
              MobileApp.startMobileAppPayment(JSON.stringify(testVal));
            }
+	    
+	    
+	    
+	    window.onload = function() {
+  		success();
+		};
         </script>
   </head>
   <body>
